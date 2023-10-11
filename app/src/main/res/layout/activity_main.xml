@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cuadroverde"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/green"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/nombre"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:text="Erick Eduardo"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:flow_verticalBias="0.0"
+            app:layout_constraintBottom_toBottomOf="@+id/cuadroverde"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:text="Practica 1"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nombre"
+            app:flow_verticalBias="0.6"
+            app:layout_constraintBottom_toBottomOf="@+id/cuadroverde"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:id="@+id/izquierda"
+        android:background="@color/blue"
+        app:layout_constraintTop_toBottomOf="@+id/cuadroverde"
+        app:layout_constraintBottom_toBottomOf="@id/rojo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/derecha"
+        app:layout_constraintBottom_toTopOf="@id/rojo"
+    />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:id="@+id/derecha"
+        android:background="@color/blue"
+        app:layout_constraintTop_toBottomOf="@+id/cuadroverde"
+        app:layout_constraintBottom_toBottomOf="@id/rojo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/izquierda"
+        app:layout_constraintBottom_toTopOf="@id/rojo"
+
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        android:id="@+id/rojo"
+        android:background="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuadroverde"
+        app:layout_constraintVertical_bias="1.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
